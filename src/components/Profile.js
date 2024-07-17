@@ -3,7 +3,7 @@ import { Container, Typography, Card, CardContent, Grid, Avatar } from '@mui/mat
 
 const Profile = () => {
   return (
-    <Container>
+    <Container sx={{ padding: 3 }}>
       <Card sx={{ marginBottom: 2, padding: 3, backgroundColor: '#f5f5f5' }}>
         <CardContent>
           <Grid container spacing={2}>
