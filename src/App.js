@@ -5,6 +5,8 @@ import Profile from './components/Profile';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { Container } from '@mui/material';
+import Technologies from './components/Technologies ';
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
       <Profile />
       <Experience />
       <Contact />
+      <Technologies />
       <Footer />
     </div>
   );
