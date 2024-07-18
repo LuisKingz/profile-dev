@@ -4,17 +4,36 @@ import { Container, Typography, Card, CardContent, Grid, Avatar } from '@mui/mat
 const Profile = () => {
   return (
     <Container sx={{ padding: 3 }}>
-      <Card sx={{ marginBottom: 2, padding: 3, backgroundColor: '#f5f5f5' }}>
+      <Card
+        sx={{
+          marginBottom: 2,
+          padding: 3,
+          backgroundColor: '#ffffff',
+          borderRadius: 3,
+          boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+          transition: 'transform 0.3s, box-shadow 0.3s',
+        }}
+      >
         <CardContent>
-          <Grid container spacing={2}>
-            <Grid item>
-              <Avatar 
-                alt="Luis Fernando" 
-                src="/path/to/your/photo.jpg" 
-                sx={{ width: 100, height: 100 }}
+          <Grid container spacing={3} alignItems="center">
+            <Grid item xs={12} sm={4} md={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center' }}>
+              <Avatar
+                alt="Luis Fernando"
+                src="/path/to/your/photo.jpg"
+                sx={{
+                  width: { xs: 110, sm: 150, md: 190 },
+                  height: { xs: 110, sm: 150, md: 190 },
+                  border: '2px solid #3f51b5',
+                  boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                    boxShadow: '0 6px 12px rgba(0,0,0,0.15)',
+                    transition: 'transform 0.3s, box-shadow 0.3s',
+                  },
+                }}
               />
             </Grid>
-            <Grid item xs>
+            <Grid item xs={12} sm={8} md={9}>
               <Typography variant="h4" component="h2" gutterBottom>
                 Acerca de mí
               </Typography>

@@ -9,7 +9,8 @@ const ExperienceV2 = () => {
         Experiencia Profesional
       </Typography>
       {/* SEMICMEX */}
-      <Accordion >
+      <Accordion sx={{
+        backgroundColor: '#f5f5f5', borderTopLeftRadius: 2, borderTopRightRadius: 2, boxShadow: '0 3px 5px rgba(0,0,0,0.1)', '&:hover': {backgroundColor: '#e0e0e0'} }} >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -72,7 +73,7 @@ const ExperienceV2 = () => {
                 <li>Refactoricé el código para la creación de reportes en PDF, mejorando el rendimiento y reduciendo el tiempo de generación en un 80%. Además, implementé una nueva interfaz para este proceso, eliminando la necesidad de ingresar directamente al código.</li>
                 <li>Diseñé y desarrollé un prototipo de reproductor de video, integrando tecnología OCR para la detección de caracteres en las placas de vehículos, mejorando la precisión de la lectura de datos en un 50%.</li>
                 <li>Implementé un nuevo proceso de autenticación y seguridad, aumentando la protección y mejorando la experiencia de ingreso a los sistemas, reduciendo los intentos de acceso no autorizado.</li>
-                <li>Participé en el desarrollo de un software para llevar la gestion de los vehiculos de la empresa, mejorando la administración de la información.</li>
+                <li>Participé en el desarrollo de un software para llevar la gestión de los vehículos de la empresa, mejorando la administración de la información.</li>
                 <li>Participé en la identificación y resolución de errores en el sistema de recursos humanos.</li>
               </ul>
             </Grid>
@@ -80,7 +81,7 @@ const ExperienceV2 = () => {
         </AccordionDetails>
       </Accordion>
       {/* AccionTi */}
-      <Accordion >
+      <Accordion sx={{ backgroundColor: '#f5f5f5', boxShadow: '0 3px 5px rgba(0,0,0,0.1)', '&:hover': {backgroundColor: '#e0e0e0'} }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -148,7 +149,7 @@ const ExperienceV2 = () => {
         </AccordionDetails>
       </Accordion>
       {/* Ayuntamiento de Temixco */}
-      <Accordion >
+      <Accordion sx={{ backgroundColor: '#f5f5f5', boxShadow: '0 3px 5px rgba(0,0,0,0.1)', '&:hover': {backgroundColor: '#e0e0e0'} }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -214,7 +215,7 @@ const ExperienceV2 = () => {
         </AccordionDetails>
       </Accordion>
       {/* Servicios de Salud Morelos (SSM) */}
-      <Accordion >
+      <Accordion sx={{ backgroundColor: '#f5f5f5', borderBottomLeftRadius: 2, borderBottomRightRadius: 2, boxShadow: '0 3px 5px rgba(0,0,0,0.1)', '&:hover': {backgroundColor: '#e0e0e0'} }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -260,10 +261,10 @@ const ExperienceV2 = () => {
                 Rol administrativo en la Dirección de Atención Medica (DAM).
               </Typography>
               <Typography variant="body1">
-                Captura y digitalización de documentos internos: Conversión de documentos físicos en formatos digitales, mejorando la accesibilidad y la organización de la información.
+                Gestión de Captura y Digitalización de Documentación Interna: Convertí documentos físicos en formatos digitales, mejorando la accesibilidad y la organización de la información
               </Typography>
               <Typography variant="body1">
-                Diseño y creación de diagramas de flujo: Uso de herramientas visuales para representar procesos de manera clara y concisa, facilitando la compresión y optimización de los procedimientos internos y para los procesos del Hospital General de Cuernavaca “Dr. José G. Parres”.
+                Diseño y Creación de Diagramas de Flujo: Utilicé herramientas visuales para representar procesos de manera clara y concisa, facilitando la comprensión y optimización de los procedimientos internos en el Hospital General de Cuernavaca "Dr. José G. Parres"
               </Typography>
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -271,8 +272,8 @@ const ExperienceV2 = () => {
                 Logros:
               </Typography>
               <ul>
-                <li></li>
-                <li></li>
+                <li>Al digitalizar la información que se tenía en formato físico, se redujo significativamente el tiempo necesario para buscar expedientes y compartir información entre las diferentes áreas.</li>
+                <li>Actualicé y generé los diagramas de flujo del Hospital General de Cuernavaca 'Dr. José G. Parres', mejorando la claridad y comprensión de estos diagramas. Esto ayudó a evitar la ejecución incorrecta de procedimientos y a optimizar los procesos internos.</li>
 
               </ul>
             </Grid>
