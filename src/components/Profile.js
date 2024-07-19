@@ -1,22 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container, Typography, Card, CardContent, Grid, Avatar } from '@mui/material';
+import { styled } from '@mui/system';
+import { useTranslation } from '../context/LanguageContext';
+
+const ProfileCard = styled(Card)(({ theme }) => ({
+  marginBottom: theme.spacing(2),
+  padding: theme.spacing(3),
+  backgroundColor: '#f5f5f5',
+  borderRadius: '16px 16px 0 0',
+  boxShadow: '0 3px 5px rgba(0,0,0,0.1)',
+}));
 
 const Profile = () => {
+  const t = useTranslation();
+
+
   return (
     <Container sx={{ padding: 3 }}>
-      <Card
-        sx={{
-          marginBottom: 2,
-          padding: 3,
-          backgroundColor: '#ffffff',
-          borderRadius: 3,
-          boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-          transition: 'transform 0.3s, box-shadow 0.3s',
-        }}
-      >
+      <ProfileCard>
         <CardContent>
-          <Grid container spacing={3} alignItems="center">
-            <Grid item xs={12} sm={4} md={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center' }}>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={4} md={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center'  }}>
               <Avatar
                 alt="Luis Fernando"
                 src="/path/to/your/photo.jpg"
@@ -33,28 +37,19 @@ const Profile = () => {
                 }}
               />
             </Grid>
-            <Grid item xs={12} sm={8} md={9}>
+            <Grid item xs textAlign={'justify'}>
               <Typography variant="h4" component="h2" gutterBottom>
-                Acerca de mí
+                {t('profile').title}
               </Typography>
-              <Typography variant="body1" paragraph>
-                Me llamo Luis Fernando y mi objetivo como desarrollador web es ofrecer soluciones ágiles y eficaces mediante el desarrollo de aplicaciones web usando las tecnologías más actuales.
-              </Typography>
-              <Typography variant="body1" paragraph>
-                Estoy en búsqueda de nuevos proyectos que pongan a prueba mis habilidades adquiridas durante mi formación y prácticas profesionales. Durante mi experiencia he desempeñado diversos roles en el proceso de desarrollo de software, incluyendo:
-              </Typography>
-              <Typography variant="body1" component="div">
-                <ul>
-                  <li>Planificación, desarrollo y gestión de proyectos según las métricas del PMBOK.</li>
-                  <li>Análisis de requisitos para el desarrollo de software.</li>
-                  <li>Analista-programador.</li>
-                  <li>Administrador de base de datos.</li>
-                </ul>
+              <Typography variant="body1" paragraph >
+                {t('profile').content.map((paragraph, index) => (
+                  <span key={index}>{paragraph}</span> 
+                ))}
               </Typography>
             </Grid>
           </Grid>
         </CardContent>
-      </Card>
+      </ProfileCard>
     </Container>
   );
 }

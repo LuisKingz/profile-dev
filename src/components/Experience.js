@@ -1,287 +1,97 @@
 import React from 'react';
 import { Container, Typography, Accordion, AccordionSummary, AccordionDetails, Grid } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { useTranslation } from '../context/LanguageContext';
 
-const ExperienceV2 = () => {
+const Experience = () => {
+  const t = useTranslation();
+
   return (
     <Container sx={{ marginBottom: 3 }}>
       <Typography variant="h4" component="h2" gutterBottom>
-        Experiencia Profesional
+        {t('experience').title}
       </Typography>
       {/* SEMICMEX */}
-      <Accordion sx={{
-        backgroundColor: '#f5f5f5', borderTopLeftRadius: 2, borderTopRightRadius: 2, boxShadow: '0 3px 5px rgba(0,0,0,0.1)', '&:hover': {backgroundColor: '#e0e0e0'} }} >
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography variant="h6">SEMICMEX PF</Typography>
-          <Typography variant="subtitle1" sx={{
-            marginLeft: 2,
-            color: '#757575',
-            fontWeight: 'bold',
-            fontSize: 15,
-            display: { xs: 'none', sm: 'block' },
-            textAlign: 'center',
-            alignItems: 'center',
-            justifyContent: 'center',
-            alignSelf: 'center',
-            verticalAlign: 'center',
-          }}>
-            Desarrollador web | Junio 2022 – Actualidad
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Grid container spacing={2}>
-            <Typography variant="subtitle1" sx={{
-              marginLeft: 2,
-              color: '#757575',
-              fontWeight: 'bold',
-              fontSize: 15,
-              display: { xs: 'block', sm: 'none' },
-              textAlign: 'center',
-              alignItems: 'center',
-              justifyContent: 'center',
-              alignSelf: 'center',
-              verticalAlign: 'center',
-            }}>
-              Desarrollador web | Junio 2022 – Actualidad
-            </Typography>
-            <Grid item xs={12} sm={6}>
-              <Typography variant="h6" gutterBottom>
-                Actividades:
-              </Typography>
-              <Typography variant="body1">
-                Mejora y actualización continua de los sistemas internos para garantizar la satisfacción del usuario.
-              </Typography>
-              <Typography variant="body1">
-                Análisis detallado de requisitos para garantizar la exactitud de la implementación.
-              </Typography>
-              <Typography variant="body1">
-                Gestión de Bases de Datos mediante Mongo.
-              </Typography>
-              <Typography variant="body1">
-                Competencia en diversas herramientas tecnológicas como son React JS, React Native, Jquery, DataTables Js, Node JS, Laravel, php C#, Java.
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <Typography variant="h6" gutterBottom>
-                Logros:
-              </Typography>
-              <ul>
-                <li>Refactoricé el código para la creación de reportes en PDF, mejorando el rendimiento y reduciendo el tiempo de generación en un 80%. Además, implementé una nueva interfaz para este proceso, eliminando la necesidad de ingresar directamente al código.</li>
-                <li>Diseñé y desarrollé un prototipo de reproductor de video, integrando tecnología OCR para la detección de caracteres en las placas de vehículos, mejorando la precisión de la lectura de datos en un 50%.</li>
-                <li>Implementé un nuevo proceso de autenticación y seguridad, aumentando la protección y mejorando la experiencia de ingreso a los sistemas, reduciendo los intentos de acceso no autorizado.</li>
-                <li>Participé en el desarrollo de un software para llevar la gestión de los vehículos de la empresa, mejorando la administración de la información.</li>
-                <li>Participé en la identificación y resolución de errores en el sistema de recursos humanos.</li>
-              </ul>
-            </Grid>
-          </Grid>
-        </AccordionDetails>
-      </Accordion>
-      {/* AccionTi */}
-      <Accordion sx={{ backgroundColor: '#f5f5f5', boxShadow: '0 3px 5px rgba(0,0,0,0.1)', '&:hover': {backgroundColor: '#e0e0e0'} }}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography variant="h6">AccionTi</Typography>
-          <Typography variant="subtitle1" sx={{
-            marginLeft: 2,
-            color: '#757575',
-            fontWeight: 'bold',
-            fontSize: 15,
-            display: { xs: 'none', sm: 'block' },
-            textAlign: 'center',
-            alignItems: 'center',
-            justifyContent: 'center',
-            alignSelf: 'center',
-            verticalAlign: 'center',
-          }}>
-            Desarrollador web (practicante) | Enero 2021 – Abril 2021
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Grid container spacing={2}>
-            <Typography variant="subtitle1" sx={{
-              marginLeft: 2,
-              color: '#757575',
-              fontWeight: 'bold',
-              fontSize: 15,
-              display: { xs: 'block', sm: 'none' },
-              textAlign: 'center',
-              alignItems: 'center',
-              justifyContent: 'center',
-              alignSelf: 'center',
-              verticalAlign: 'center',
-            }}>
-              Desarrollador web (practicante) | Enero 2021 – Abril 2021
-            </Typography>
-            <Grid item xs={12} sm={6}>
-              <Typography variant="h6" gutterBottom>
-                Actividades:
-              </Typography>
-              <Typography variant="body1">
-                Liderazgo eficiente de los proyectos internos: administración y dirección de proyectos.
-              </Typography>
-              <Typography variant="body1">
-                Análisis de requisitos del sistema: conocimiento en el distinguir y comprensión de requerimientos.
-              </Typography>
-              <Typography variant="body1">
-                Desarrollo Back-End: creación de soluciones robustas y escalables.
-              </Typography>
-              <Typography variant="body1">
-                Habilidad en análisis y gestión de bases de datos: competencia en el diseño, implementación y optimización de bases de datos.
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <Typography variant="h6" gutterBottom>
-                Logros:
-              </Typography>
-              <ul>
-                <li>Implementé el software ERP Odoo Community, mejorando la interacción con los clientes mediante una interfaz más intuitiva y funcionalidades avanzadas. Esta implementación también redujo los costos de adquisición de software en un 40% al eliminar la necesidad de soluciones propietarias costosas.</li>
-                <li>Desarrollé un sistema integral para la gestión de proyectos internos, permitiendo un seguimiento detallado del tiempo de tareas de los usuarios. Esto facilitó la identificación de cuellos de botella y la optimización de procesos, resultando en una reducción significativa de costos operativos.</li>
-              </ul>
-            </Grid>
-          </Grid>
-        </AccordionDetails>
-      </Accordion>
-      {/* Ayuntamiento de Temixco */}
-      <Accordion sx={{ backgroundColor: '#f5f5f5', boxShadow: '0 3px 5px rgba(0,0,0,0.1)', '&:hover': {backgroundColor: '#e0e0e0'} }}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography variant="h6">Ayuntamiento de Temixco</Typography>
-          <Typography variant="subtitle1" sx={{
-            marginLeft: 2,
-            color: '#757575',
-            fontWeight: 'bold',
-            fontSize: 15,
-            display: { xs: 'none', sm: 'block' },
-            textAlign: 'center',
-            alignItems: 'center',
-            justifyContent: 'center',
-            alignSelf: 'center',
-            verticalAlign: 'center',
-          }}>
-            Desarrollador web (practicante) | Mayo 2019 – Agosto 2019
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Grid container spacing={2}>
-            <Typography variant="subtitle1" sx={{
-              marginLeft: 2,
-              color: '#757575',
-              fontWeight: 'bold',
-              fontSize: 15,
-              display: { xs: 'block', sm: 'none' },
-              textAlign: 'center',
-              alignItems: 'center',
-              justifyContent: 'center',
-              alignSelf: 'center',
-              verticalAlign: 'center',
-            }}>
-              Desarrollador web (practicante) | Mayo 2019 – Agosto 2019
-            </Typography>
-            <Grid item xs={12} sm={6}>
-              <Typography variant="h6" gutterBottom>
-                Actividades:
-              </Typography>
-              <Typography variant="body1">
-                <b>Análisis de requisitos de sistema:</b> identificación y documentación precisa de los requisitos, garantizando una base sólida para el desarrollo de soluciones eficaces.
-              </Typography>
-              <Typography variant="body1">
-                Análisis y modelado de bases de datos utilizando el gestor de MySQL, asegurando la eficacia y la integración de los datos.
-              </Typography>
-              <Typography variant="body1">
-                <b>Desarrollo del Módulo de gestión de usuarios:</b> administración eficiente y segura de usuarios, mejorando la usabilidad y la seguridad del sistema en general.
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <Typography variant="h6" gutterBottom>
-                Logros:
-              </Typography>
-              <ul>
-                <li>Contribuí al desarrollo de un nuevo sistema en colaboración con varios programadores, enfocándome en el módulo de inicio de sesión, lo que mejoró la experiencia del usuario, proporcionó una plataforma más actualizada y eficaz, y aumentó la escalabilidad del sistema.</li>
-                <li>Identifiqué y diseñé la base de datos para el sistema, mejorando la percepción y documentación de las tablas y sus relaciones, lo que no estaba presente en el sistema anterior.</li>
 
-              </ul>
-            </Grid>
-          </Grid>
-        </AccordionDetails>
-      </Accordion>
-      {/* Servicios de Salud Morelos (SSM) */}
-      <Accordion sx={{ backgroundColor: '#f5f5f5', borderBottomLeftRadius: 2, borderBottomRightRadius: 2, boxShadow: '0 3px 5px rgba(0,0,0,0.1)', '&:hover': {backgroundColor: '#e0e0e0'} }}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography variant="h6">Servicios de Salud Morelos (SSM)</Typography>
-          <Typography variant="subtitle1" sx={{
-            marginLeft: 2,
-            color: '#757575',
-            fontWeight: 'bold',
-            fontSize: 15,
-            display: { xs: 'none', sm: 'block' },
-            textAlign: 'center',
-            alignItems: 'center',
-            justifyContent: 'center',
-            alignSelf: 'center',
-            verticalAlign: 'center',
-          }}>
-            Servicio Social | Mayo 2016 – Septiembre 2016
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Grid container spacing={2}>
-            <Typography variant="subtitle1" sx={{
-              marginLeft: 2,
-              color: '#757575',
-              fontWeight: 'bold',
-              fontSize: 15,
-              display: { xs: 'block', sm: 'none' },
-              textAlign: 'center',
-              alignItems: 'center',
-              justifyContent: 'center',
-              alignSelf: 'center',
-              verticalAlign: 'center',
-            }}>
-              Servicio Social | Mayo 2016 – Septiembre 2016
-            </Typography>
-            <Grid item xs={12} sm={6}>
-              <Typography variant="h6" gutterBottom>
-                Actividades:
+      {
+        t('experience').jobs.map((job, index) => (
+          <Accordion sx={{
+            backgroundColor: '#f5f5f5',
+            borderTopLeftRadius: 2, 
+            borderTopRightRadius: 2,
+            boxShadow: '0 3px 5px rgba(0,0,0,0.1)',
+            '&:hover': {
+              backgroundColor: '#e0e0e0'
+            }
+          }} >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography variant="h6">{index}</Typography>
+              <Typography variant="subtitle1" sx={{
+                marginLeft: 2,
+                color: '#757575',
+                fontWeight: 'bold',
+                fontSize: 15,
+                display: { xs: 'none', sm: 'block' },
+                textAlign: 'center',
+                alignItems: 'center',
+                justifyContent: 'center',
+                alignSelf: 'center',
+                verticalAlign: 'center',
+              }}>
+                {job.time}
               </Typography>
-              <Typography variant="body1">
-                Rol administrativo en la Dirección de Atención Medica (DAM).
-              </Typography>
-              <Typography variant="body1">
-                Gestión de Captura y Digitalización de Documentación Interna: Convertí documentos físicos en formatos digitales, mejorando la accesibilidad y la organización de la información
-              </Typography>
-              <Typography variant="body1">
-                Diseño y Creación de Diagramas de Flujo: Utilicé herramientas visuales para representar procesos de manera clara y concisa, facilitando la comprensión y optimización de los procedimientos internos en el Hospital General de Cuernavaca "Dr. José G. Parres"
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <Typography variant="h6" gutterBottom>
-                Logros:
-              </Typography>
-              <ul>
-                <li>Al digitalizar la información que se tenía en formato físico, se redujo significativamente el tiempo necesario para buscar expedientes y compartir información entre las diferentes áreas.</li>
-                <li>Actualicé y generé los diagramas de flujo del Hospital General de Cuernavaca 'Dr. José G. Parres', mejorando la claridad y comprensión de estos diagramas. Esto ayudó a evitar la ejecución incorrecta de procedimientos y a optimizar los procesos internos.</li>
-
-              </ul>
-            </Grid>
-          </Grid>
-        </AccordionDetails>
-      </Accordion>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Grid container spacing={2}>
+                <Typography variant="subtitle1" sx={{
+                  marginLeft: 2,
+                  color: '#757575',
+                  fontWeight: 'bold',
+                  fontSize: 15,
+                  display: { xs: 'block', sm: 'none' },
+                  textAlign: 'center',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  alignSelf: 'center',
+                  verticalAlign: 'center',
+                }}>
+                  {job.time}
+                </Typography>
+                <Grid item xs={12} sm={6}>
+                  <Typography variant="h6" gutterBottom>
+                    {job.subtitle_activities}
+                  </Typography>
+                  <ul>
+                    {
+                      job.activities.map((activity, index) => (
+                        <li key={index}>{activity}</li>
+                      ))
+                    }
+                  </ul>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <Typography variant="h6" gutterBottom>
+                    {job.subtitle_achievements}
+                  </Typography>
+                  <ul>
+                    {
+                      job.achievements.map((achievement, index) => (
+                        <li key={index}>{achievement}</li>
+                      ))
+                    }
+                  </ul>
+                </Grid>
+              </Grid>
+            </AccordionDetails>
+          </Accordion>
+        ))
+      }
     </Container>
   );
 };
 
-export default ExperienceV2;
+export default Experience;

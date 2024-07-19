@@ -1,7 +1,9 @@
 import React from 'react';
 import { Container, Typography, Card, CardContent, Grid, LinearProgress, Divider } from '@mui/material';
-import { SiReact, SiJavascript, SiCss3, SiHtml5, SiNodedotjs, SiPhp, SiLaravel, SiMongodb, SiMysql, SiPostgresql, SiGit, SiDocker, SiGraphql, SiVisualstudio, SiJira, SiNgrok, SiCsharp,SiPython } from 'react-icons/si';
+import { SiReact, SiJavascript, SiCss3, SiHtml5, SiNodedotjs, SiPhp, SiLaravel, SiMongodb, SiMysql, SiPostgresql, SiGit, SiDocker, SiVisualstudio, SiJira, SiNgrok, SiCsharp, SiPython } from 'react-icons/si';
 import { FaJava } from 'react-icons/fa';
+
+
 
 const technologies = {
     'Front-End': [
@@ -61,7 +63,7 @@ const Technologies = () => {
                                             <Typography variant="body1" component="div" sx={{ marginBottom: 0 }}>
                                                 {tech.name}
                                             </Typography>
-                                            <LinearProgress variant="determinate" value={tech.value} sx={{ height: 10, borderRadius: 5 }} />
+                                            <LinearProgress variant="determinate" value={tech.value} sx={{ height: 10, borderRadius: 5, '&:hover': { boxShadow: '0 0 10px 0 rgba(0,0,0,0.5)' } }} />
                                             <Typography variant="caption" color="text.secondary" sx={{ textAlign: 'right' }}>
                                                 {tech.value}%
                                             </Typography>

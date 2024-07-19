@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Typography, Card, CardContent, Grid, Link } from '@mui/material';
-import { Email, Phone, LinkedIn, LocationOn, Chat } from '@mui/icons-material';
+import { Email, Phone, LinkedIn, LocationOn } from '@mui/icons-material';
+import { FaSkype } from 'react-icons/fa'
 
 const Contact = () => {
   return (
@@ -12,84 +13,84 @@ const Contact = () => {
           </Typography>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6} md={4}>
-              <Card sx={{
-                padding: 2,
-                display: 'flex',
-                alignItems: 'center',
-                transition: 'transform 0.3s, background-color 0.3s',
-                '&:hover': {
-                  transform: 'scale(1.05)',
-                  backgroundColor: '#e0e0e0',
-                },
-              }}>
-                <Chat color="primary" sx={{ marginRight: 2 }} />
-                <div>
-                  <Typography variant="h6">Skype</Typography>
-                  <Link href="https://join.skype.com/invite/kzzBhwnXdiuN" target="_blank" rel="noopener noreferrer">
+              <Link href="https://join.skype.com/invite/kzzBhwnXdiuN" target="_blank" rel="noopener noreferrer" sx={{ textDecoration: 'none' }}>
+                <Card sx={{
+                  padding: 2,
+                  display: 'flex',
+                  alignItems: 'center',
+                  transition: 'transform 0.3s, background-color 0.3s',
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                    backgroundColor: '#e0e0e0',
+                  },
+                }}>
+                  <FaSkype className='icon skype primary' fontSize="1.4rem" color='#1976d2' />
+                  <div style={{ marginLeft: '1rem' }}> 
+                    <Typography variant="h6">Skype</Typography>
                     Luis Reyes
-                  </Link>
-                </div>
-              </Card>
+                  </div>
+                </Card>
+              </Link>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
-              <Card sx={{
-                padding: 2,
-                display: 'flex',
-                alignItems: 'center',
-                transition: 'transform 0.3s, background-color 0.3s',
-                '&:hover': {
-                  transform: 'scale(1.05)',
-                  backgroundColor: '#e0e0e0',
-                },
-              }}>
-                <Email color="primary" sx={{ marginRight: 2 }} />
-                <div>
-                  <Typography variant="h6">Email</Typography>
-                  <Link href="mailto:lfernandoacevedo57@.gmail.com" target="_blank" rel="noopener noreferrer">
+              <Link href="mailto:lfernandoacevedo57@.gmail.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                <Card sx={{
+                  padding: 2,
+                  display: 'flex',
+                  alignItems: 'center',
+                  transition: 'transform 0.3s, background-color 0.3s',
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                    backgroundColor: '#e0e0e0',
+                  },
+                }}>
+                  <Email color="primary" sx={{ marginRight: 2 }} />
+                  <div>
+                    <Typography variant="h6">Email</Typography>
                     lfernandoacevedo57@.gmail.com
-                  </Link>
-                </div>
-              </Card>
+                  </div>
+                </Card>
+              </Link>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
-              <Card sx={{
-                padding: 2,
-                display: 'flex',
-                alignItems: 'center',
-                transition: 'transform 0.3s, background-color 0.3s',
-                '&:hover': {
-                  transform: 'scale(1.05)',
-                  backgroundColor: '#e0e0e0',
-                },
-              }}>
-                <Phone color="primary" sx={{ marginRight: 2 }} />
-                <div>
-                  <Typography variant="h6">Teléfono</Typography>
-                  <Link href="tel:+52 777 446 2377" target="_blank" rel="noopener noreferrer">
+              <Link href="tel:+52 777 446 2377" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                <Card sx={{
+                  padding: 2,
+                  display: 'flex',
+                  alignItems: 'center',
+                  transition: 'transform 0.3s, background-color 0.3s',
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                    backgroundColor: '#e0e0e0',
+                  },
+                }}>
+                  <Phone color="primary" sx={{ marginRight: 2 }} />
+                  <div>
+                    <Typography variant="h6">Teléfono</Typography>
                     +52 777 446 2377
-                  </Link>
-                </div>
-              </Card>
+                  </div>
+                </Card>
+              </Link>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
-              <Card sx={{
-                padding: 2,
-                display: 'flex',
-                alignItems: 'center',
-                transition: 'transform 0.3s, background-color 0.3s',
-                '&:hover': {
-                  transform: 'scale(1.05)',
-                  backgroundColor: '#e0e0e0',
-                },
-              }}>
-                <LinkedIn color="primary" sx={{ marginRight: 2 }} />
-                <div>
-                  <Typography variant="h6">LinkedIn</Typography>
-                  <Link href="https://www.linkedin.com/in/luis-acevedo-r/" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.linkedin.com/in/luis-acevedo-r/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                <Card sx={{
+                  padding: 2,
+                  display: 'flex',
+                  alignItems: 'center',
+                  transition: 'transform 0.3s, background-color 0.3s',
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                    backgroundColor: '#e0e0e0',
+                  },
+                }}>
+                  <LinkedIn color="primary" sx={{ marginRight: 2 }} />
+                  <div>
+                    <Typography variant="h6">LinkedIn</Typography>
                     luis-acevedo-r
-                  </Link>
-                </div>
-              </Card>
+                  </div>
+                </Card>
+              </Link>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <Card sx={{
@@ -105,7 +106,7 @@ const Contact = () => {
                 <LocationOn color="primary" sx={{ marginRight: 2 }} />
                 <div>
                   <Typography variant="h6">Ubicación</Typography>
-                  <Typography variant="body1">Cuernavaca, Morelos</Typography>
+                  Cuernavaca, Morelos
                 </div>
               </Card>
             </Grid>
