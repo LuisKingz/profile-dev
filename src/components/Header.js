@@ -1,46 +1,55 @@
 import React, { useContext } from 'react';
-import { AppBar, Toolbar, Typography, Grid, Switch } from '@mui/material';
+import { AppBar, Toolbar, Typography, Switch, Button, FormControlLabel } from '@mui/material';
 import { Code } from '@mui/icons-material';
 import { LanguageContext, useTranslation } from '../context/LanguageContext';
+import { Link } from 'react-scroll';
+import { FaFlag } from 'react-icons/fa';
 
 const Header = () => {
+
   const { language, toggleLanguage } = useContext(LanguageContext);
   const t = useTranslation();
 
 
   return (
     <AppBar position="static" sx={{ backgroundColor: '#3f51b5' }}>
-      <Toolbar>
-        <Code sx={{ mr: 1 }} />
-        <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          {t('header').title}
-        </Typography>
-
-        <Grid container spacing={2} justifyContent="center" alignItems="center" sx={{ flexGrow: 2 }}>
+      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <Code sx={{ mr: 2 }} />
+          <Typography variant="h6">
+            {t('header').title}
+          </Typography>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
           {t('header').options.map((option, index) => (
-            <Grid item key={index}>
-              <Typography variant="body1" component="a" href={`#${option.toLowerCase()}`} sx={{ color: 'white', textDecoration: 'none' }}>
+            <Link
+              key={index}
+              to={option.toLowerCase()}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              <Button sx={{ color: '#fff', marginRight: 2 }}>
                 {option}
-              </Typography>
-            </Grid>
+              </Button>
+            </Link>
           ))
           }
-        </Grid>
-
-        <Typography variant="body2" sx={{ marginRight: 1 }}>
-          ES
-        </Typography>
-        <Switch
-          checked={language === 'en'}
-          onChange={toggleLanguage}
-          color="default"
-          inputProps={{ 'aria-label': 'language switch' }}
-        />
-        <Typography variant="body2" sx={{ marginLeft: 1 }}>
-          EN
-        </Typography>
+          <FormControlLabel
+            control={<Switch checked={language === 'en'} onChange={toggleLanguage} color="default" />}
+            label={language === 'en' ? 'EN' : 'ES'}
+            sx={{ color: '#fff' }}
+          />
+          {
+            language === 'en' ?
+            <FaFlag className='icon flag primary' fontSize="1.4rem" color='#fff' /> :
+            <FaFlag className='icon flag primary' fontSize="1.4rem" color='#fff' style={{ transform: 'scaleX(-1)' }} />
+          }
+        </div>
       </Toolbar>
-    </AppBar>
+    </AppBar >
   );
 };
 

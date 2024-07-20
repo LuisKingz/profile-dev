@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Container, Typography, Card, CardContent, Grid, Avatar } from '@mui/material';
 import { styled } from '@mui/system';
-import { useTranslation } from '../context/LanguageContext';
+import { LanguageContext, useTranslation } from '../context/LanguageContext';
 
 const ProfileCard = styled(Card)(({ theme }) => ({
   marginBottom: theme.spacing(2),
@@ -12,11 +12,11 @@ const ProfileCard = styled(Card)(({ theme }) => ({
 }));
 
 const Profile = () => {
+  const { language } = useContext(LanguageContext);
   const t = useTranslation();
 
-
   return (
-    <Container sx={{ padding: 3 }}>
+    <Container id={ language === 'en' ? 'profile' : 'perfil'} sx={{ padding: 3 }}>
       <ProfileCard>
         <CardContent>
           <Grid container spacing={2}>

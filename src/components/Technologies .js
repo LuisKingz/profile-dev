@@ -1,9 +1,8 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Container, Typography, Card, CardContent, Grid, LinearProgress, Divider } from '@mui/material';
 import { SiReact, SiJavascript, SiCss3, SiHtml5, SiNodedotjs, SiPhp, SiLaravel, SiMongodb, SiMysql, SiPostgresql, SiGit, SiDocker, SiVisualstudio, SiJira, SiNgrok, SiCsharp, SiPython } from 'react-icons/si';
 import { FaJava } from 'react-icons/fa';
-
-
+import { LanguageContext, useTranslation } from '../context/LanguageContext';
 
 const technologies = {
     'Front-End': [
@@ -35,13 +34,14 @@ const technologies = {
 };
 
 const Technologies = () => {
+    const { language } = useContext(LanguageContext);
     return (
-        <Container sx={{ padding: 3 }}>
+        <Container id={ language === 'en' ? 'technologies' : 'tecnologías'} sx={{ padding: 3 }}>
             <Card
                 sx={{
                     marginBottom: 2,
                     padding: 3,
-                    backgroundColor: '#ffffff',
+                    backgroundColor: '#f5f5f5',
                     borderRadius: 3,
                     boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
                 }}

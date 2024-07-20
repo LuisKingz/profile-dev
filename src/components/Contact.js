@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container, Typography, Card, CardContent, Grid, Link } from '@mui/material';
 import { Email, Phone, LinkedIn, LocationOn } from '@mui/icons-material';
-import { FaSkype } from 'react-icons/fa'
+import { FaSkype } from 'react-icons/fa';
+import { LanguageContext, useTranslation } from '../context/LanguageContext';
 
 const Contact = () => {
+  const { language } = useContext(LanguageContext);
+
   return (
-    <Container>
+    <Container id={ language === 'en' ? 'contact' : 'contacto'} sx={{ padding: 3 }}>
       <Card sx={{ marginBottom: 2, padding: 3, backgroundColor: '#f5f5f5', borderRadius: 2, boxShadow: '0 3px 5px rgba(0,0,0,0.1)' }}>
         <CardContent>
           <Typography variant="h4" component="h2" gutterBottom>
