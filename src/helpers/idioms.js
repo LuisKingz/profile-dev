@@ -1,8 +1,8 @@
 const translations = {
   'es': {
     'header': {
-      'title': 'Luis Reyes Desarrollador Web',
-      'options': ['Perfil', 'Experiencia', 'Contacto', 'Tecnologías'],
+      'title': 'Luis Reyes - Desarrollador Web',
+      'options': ['Perfil', 'Experiencia', 'Contacto', 'Tecnologías', 'Educación'],
     },
     'profile': {
       'title': 'Acerca de mí',
@@ -78,12 +78,24 @@ const translations = {
           ]
         }
       }
-    }
+    },
+    'education': [
+      {
+        school: "Universidad Tecnológica de Emiliano Zapata",
+        degree: "Ingeniería en Tecnologías de la Información",
+        period: "Septiembre 2019 - Abril 2021",
+      },
+      {
+        school: "Universidad Tecnológica de Emiliano Zapata",
+        degree: "TSU en Tecnoligías de la Información área Sistemas Informáticos.",
+        period: "Septiembre 2017 - Agosto 2019",
+      }
+    ]
   },
   'en': {
     'header': {
-      'title': 'Luis Reyes Web Developer',
-      'options': ['Profile', 'Experience', 'Contact', 'Technologies']
+      'title': 'Luis Reyes - Web Developer',
+      'options': ['Profile', 'Experience', 'Contact', 'Technologies', 'Education'],
     },
     'profile': {
       'title': 'About Me',
@@ -159,7 +171,19 @@ const translations = {
           ]
         }
       }
-    }
+    },
+    'education': [
+      {
+        school: "Emiliano Zapata Technological University",
+        degree: "Information Technology Engineering",
+        period: "September 2019 - April 2021",
+      },
+      {
+        school: "Emiliano Zapata Technological University",
+        degree: "TSU in Information Technology, Information Systems Area.",
+        period: "September 2017 - August 2019",
+      }
+    ]
   }
 };
 

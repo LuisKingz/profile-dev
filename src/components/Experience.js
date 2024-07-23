@@ -63,7 +63,7 @@ const Experience = () => {
                   }}>
                     {job.time}
                   </Typography>
-                  <Grid item xs={12} sm={6}>
+                  <Grid item xs={12} sm={6} sx={{ textAlign: 'justify', padding: 2, display: 'flex', flexDirection: 'column' }}>
                     <Typography variant="h6" gutterBottom>
                       {job.subtitle_activities}
                     </Typography>
@@ -75,7 +75,7 @@ const Experience = () => {
                       }
                     </ul>
                   </Grid>
-                  <Grid item xs={12} sm={6}>
+                  <Grid item xs={12} sm={6} sx={{ textAlign: 'justify', padding: 2, display: 'flex', flexDirection: 'column' }}>
                     <Typography variant="h6" gutterBottom>
                       {job.subtitle_achievements}
                     </Typography>

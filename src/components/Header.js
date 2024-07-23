@@ -3,7 +3,6 @@ import { AppBar, Toolbar, Typography, Switch, Button, FormControlLabel } from '@
 import { Code } from '@mui/icons-material';
 import { LanguageContext, useTranslation } from '../context/LanguageContext';
 import { Link } from 'react-scroll';
-import { FaFlag } from 'react-icons/fa';
 
 const Header = () => {
 
@@ -44,8 +43,9 @@ const Header = () => {
           />
           {
             language === 'en' ?
-            <FaFlag className='icon flag primary' fontSize="1.4rem" color='#fff' /> :
-            <FaFlag className='icon flag primary' fontSize="1.4rem" color='#fff' style={{ transform: 'scaleX(-1)' }} />
+              <img src="https://flagcdn.com/us.svg" height={25} alt="US Flag" />
+              :
+              <img src="https://flagcdn.com/mx.svg" height={25} alt="MX Flag" />
           }
         </div>
       </Toolbar>

@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import { Container, Typography, Card, CardContent, Grid, LinearProgress, Divider } from '@mui/material';
 import { SiReact, SiJavascript, SiCss3, SiHtml5, SiNodedotjs, SiPhp, SiLaravel, SiMongodb, SiMysql, SiPostgresql, SiGit, SiDocker, SiVisualstudio, SiJira, SiNgrok, SiCsharp, SiPython } from 'react-icons/si';
 import { FaJava } from 'react-icons/fa';
-import { LanguageContext, useTranslation } from '../context/LanguageContext';
+import { LanguageContext } from '../context/LanguageContext';
 
 const technologies = {
     'Front-End': [

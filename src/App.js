@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Technologies from './components/Technologies ';
 import ScrollToTopButton from './components/ScrollToTopButton';
+import Education from './components/Education';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Experience />
       <Contact />
       <Technologies />
+      <Education />
       <Footer />
       <ScrollToTopButton />
     </div>

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Container, Typography, Card, CardContent, Grid, Link } from '@mui/material';
 import { Email, Phone, LinkedIn, LocationOn } from '@mui/icons-material';
 import { FaSkype } from 'react-icons/fa';
-import { LanguageContext, useTranslation } from '../context/LanguageContext';
+import { LanguageContext } from '../context/LanguageContext';
 
 const Contact = () => {
   const { language } = useContext(LanguageContext);

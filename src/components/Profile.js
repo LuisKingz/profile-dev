@@ -16,11 +16,11 @@ const Profile = () => {
   const t = useTranslation();
 
   return (
-    <Container id={ language === 'en' ? 'profile' : 'perfil'} sx={{ padding: 3 }}>
+    <Container id={language === 'en' ? 'profile' : 'perfil'} sx={{ padding: 3 }}>
       <ProfileCard>
         <CardContent>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={4} md={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center'  }}>
+            <Grid item xs={12} sm={4} md={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <Avatar
                 alt="Luis Fernando"
                 src="/path/to/your/photo.jpg"
@@ -41,11 +41,11 @@ const Profile = () => {
               <Typography variant="h4" component="h2" gutterBottom>
                 {t('profile').title}
               </Typography>
-              <Typography variant="body1" paragraph >
-                {t('profile').content.map((paragraph, index) => (
-                  <span key={index}>{paragraph}</span> 
-                ))}
-              </Typography>
+              {t('profile').content.map((paragraph, index) => (
+                <Typography key={index} variant="body1" paragraph>
+                  {paragraph}
+                </Typography>
+              ))}
             </Grid>
           </Grid>
         </CardContent>

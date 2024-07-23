@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Fab, useScrollTrigger, Zoom } from '@mui/material';
+import { Fab, Zoom } from '@mui/material';
 import { ArrowUpward } from '@mui/icons-material';
 
 const ScrollToTopButton = () => {
