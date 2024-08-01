@@ -12,7 +12,7 @@ const Contact = () => {
       <Card sx={{ marginBottom: 2, padding: 3, backgroundColor: '#f5f5f5', borderRadius: 2, boxShadow: '0 3px 5px rgba(0,0,0,0.1)' }}>
         <CardContent>
           <Typography variant="h4" component="h2" gutterBottom>
-            Contacto
+            { language === 'en' ? 'Contact' : 'Contacto' }
           </Typography>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6} md={4}>
@@ -49,7 +49,7 @@ const Contact = () => {
                 }}>
                   <Email color="primary" sx={{ marginRight: 2 }} />
                   <div>
-                    <Typography variant="h6">Email</Typography>
+                    <Typography variant="h6">{ language === 'en' ? 'Email' : 'Correo electrónico'}</Typography>
                     lfernandoacevedo57@.gmail.com
                   </div>
                 </Card>
@@ -69,7 +69,7 @@ const Contact = () => {
                 }}>
                   <Phone color="primary" sx={{ marginRight: 2 }} />
                   <div>
-                    <Typography variant="h6">Teléfono</Typography>
+                    <Typography variant="h6">{ language === 'en' ? 'Phone' : 'Teléfono'}</Typography>
                     +52 777 446 2377
                   </div>
                 </Card>
@@ -108,7 +108,7 @@ const Contact = () => {
               }}>
                 <LocationOn color="primary" sx={{ marginRight: 2 }} />
                 <div>
-                  <Typography variant="h6">Ubicación</Typography>
+                  <Typography variant="h6">{ language === 'en' ? 'Location' : 'Ubicación'}</Typography>
                   Cuernavaca, Morelos
                 </div>
               </Card>

@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Container, Typography, Card, CardContent, Grid, Avatar } from '@mui/material';
 import { styled } from '@mui/system';
 import { LanguageContext, useTranslation } from '../context/LanguageContext';
+import logo from '../img/logo.png';
 
 const ProfileCard = styled(Card)(({ theme }) => ({
   marginBottom: theme.spacing(2),
@@ -23,7 +24,7 @@ const Profile = () => {
             <Grid item xs={12} sm={4} md={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <Avatar
                 alt="Luis Fernando"
-                src="/path/to/your/photo.jpg"
+                src={logo}
                 sx={{
                   width: { xs: 110, sm: 150, md: 190 },
                   height: { xs: 110, sm: 150, md: 190 },

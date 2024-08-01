@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Technologies from './components/Technologies ';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import Education from './components/Education';
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Experience />
       <Contact />
       <Technologies />
+      <Projects />
       <Education />
       <Footer />
       <ScrollToTopButton />
